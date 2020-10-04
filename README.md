@@ -1,6 +1,6 @@
 # What's behind the prices of ride sharing?
 
-authors: Shelly Li (xl299), Yunan Wu (yw459), Zhifei Jin (zj98)
+authors: Shelley Li (xl299), Yunan Wu (yw459), Zhifei Jin (zj98)
 
 ## Project description
 
