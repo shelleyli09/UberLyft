@@ -22,7 +22,9 @@ We got rid of all missing values in the table and changed the datatype of one co
 ### Regression model
 
 We trained a least squares linear model on the training data, and tested it on our test set. We calculated the train and test MSE to evaluate this model. We achieve a training MSE of 0.1069, and a test MSE of 0.1052.
-![prediction for Uber and Lyft](full_scatter_plot.png)
+
+![prediction for Uber and Lyft](regression.png)
+![color coded full prediction for Uber and Lyft](full_scatter_plot.png)
 We believe that this linear model works pretty well for our data, especially for Uber rides. According to the plot, datapoints of Uber rides cluster nicely around the regression line, and Lyft rides have larger absolute errors.
 Because the test MSE is not higher than training MSE and they are both very small, we don't think the linear regression model overfits or underfits.
 
@@ -34,6 +36,7 @@ Because the test MSE is not higher than training MSE and they are both very smal
   ![different type of car has different price](uber.jpeg)
   However, it is apparent that this feature is not independent of the platform. For example, if the name value is "UberX", then the "cab_type" ("Uber" of "Lyft") will definitely be "Uber".  
   We will change this feature to categorize it into three or four buckets. For example, both "Lyft" and "UberX" will be "regular", and "LyftXL" and "UberXL" will be "XL". In this way, this feature can still indicate the type of car and be independent of other features.
+
 - We believe that the time duration of the ride will also influence the price. Currently, the data has a start time feature as well as an end time feature. We will combine these two to one feature of time lapse.
 - Because the regression model shows different accuracy for Uber and Lyft, we might attempt to train two models on both dataset, to see if we will have better results.
 - Because we have 57 features, we would like to figure out which ones are less influential to the price. The weight vector of the linear regression model has about 10 entries that is very close to 0. As we learned in class, the lasso model can produce a sparse solution, and we would attempt the lasso model, and see which features could be dropped.
