@@ -33,7 +33,7 @@ We got rid of all missing values in the table and changed the datatype of one co
 ### Regression model
 
 We trained a least squares linear model on the training data, and tested it on our test set. We calculated the train and test MSE to evaluate this model. We achieve a training MSE of 0.1069, and a test MSE of 0.1052.
-![prediction for Uber and Lyft](color_regression.png)
+![prediction for Uber and Lyft](full_scatter_plot.png)
 We believe that this linear model works pretty well for our data, especially for Uber rides. According to the plot, datapoints of Uber rides cluster nicely around the regression line, and Lyft rides have larger absolute errors.
 Because the test MSE is not higher than training MSE and they are both very small, we don't think the linear regression model overfits or underfits.
 
